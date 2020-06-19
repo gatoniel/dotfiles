@@ -1,0 +1,7 @@
+[user]
+	name = Niklas Netter
+	email = niknett@gmail.com
+[commit]
+	gpgsign = true
+[include]
+        path = ~/.gitconfig_local
