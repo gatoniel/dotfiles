@@ -10,6 +10,7 @@
     ~/.bash_profile:
     ~/.bash_logout:
     ~/.gitconfig:
+    ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.vimrc:
 
 - shell:
