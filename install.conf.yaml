@@ -9,9 +9,11 @@
     ~/.bashrc:
     ~/.bash_profile:
     ~/.bash_logout:
+    ~/.condarc:
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.vimrc:
+    ~/bin/install_conda: scripts/install_conda
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

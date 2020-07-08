@@ -1,0 +1,14 @@
+if [ ! -d "$HOME/miniconda3" ]; then
+    curl -o $HOME/conda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    mkdir $HOME/tmpconda
+    TMPDIR=$HOME/tmpconda bash conda.sh -b -p $HOME/miniconda3
+
+    rm $HOME/conda.sh
+    rm -r $HOME/tmpconda
+fi
+
+source ~/.bashrc
+conda update -y conda
+
+# SETUP standard conda envs
+conda create -n projects -y bioconda::snakemake conda-forge::cookiecutter
