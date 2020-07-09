@@ -3,6 +3,9 @@
       relink: true
 
 - clean: ['~']
+- create:
+    - ~/.vim
+    - ~/.vim/syntax
 
 - link:
     ~/.dotfiles: ''
@@ -12,6 +15,7 @@
     ~/.condarc:
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
+    ~/.vim/syntax/snakemake.vim: vim/syntax/snakemake.vim
     ~/.vimrc:
     ~/bin/install_conda: scripts/install_conda
 
