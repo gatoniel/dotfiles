@@ -18,6 +18,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'cespare/vim-toml'
 "
 " " add all your plugins here (note older versions of Vundle
 " " used Bundle instead of Plugin)
@@ -66,6 +67,10 @@ au BufNewFile, BufRead *.py
 :highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" Snakefile syntax highlighting
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.smk set syntax=snakemake
+
 set encoding=utf-8
 
 let python_highlight_all=1
@@ -94,6 +99,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "let g:syntastic_python_checkers = ['pylint']
 
-" Snakefile syntax highlighting
-au BufNewFile,BufRead Snakefile set syntax=snakemake
-au BufNewFile,BufRead *.smk set syntax=snakemake
+" from here
+" https://stackoverflow.com/questions/22980938/how-do-i-keep-syntax-highlighting-for-a-buffer-for-the-duration-of-a-vim-session
+" so the syntax higlighting does not get lost
+set hidden
