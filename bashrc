@@ -47,3 +47,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Poetry Python Package Management
+export PATH="$HOME/.poetry/bin:$PATH"
