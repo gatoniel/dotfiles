@@ -18,6 +18,7 @@
     ~/.vim/syntax/snakemake.vim: vim/syntax/snakemake.vim
     ~/.vimrc:
     ~/bin/install_conda: scripts/install_conda
+    ~/bin/install_poetry: scripts/install_poetry
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
