@@ -50,3 +50,15 @@ unset __conda_setup
 
 # Poetry Python Package Management
 export PATH="$HOME/.poetry/bin:$PATH"
+
+files=(proxies)
+path="$HOME/dotfiles_local/bash/"
+for file in ${files[@]}
+do 
+    file_to_load=$path$file
+    if [ -f "$file_to_load" ];
+    then
+        . $file_to_load
+        echo "loaded $file_to_load"
+    fi
+done
