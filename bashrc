@@ -51,6 +51,9 @@ unset __conda_setup
 # Poetry Python Package Management
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# Go Path
+export PATH="$PATH:/usr/local/go/bin"
+
 files=(proxies)
 path="$HOME/dotfiles_local/bash/"
 for file in ${files[@]}
