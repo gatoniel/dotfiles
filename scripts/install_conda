@@ -11,5 +11,8 @@ fi
 conda update -y conda
 conda install -c conda-forge mamba
 
+# in base install cookiecutter
+pip install cookiecutter
+
 # SETUP standard conda envs
 mamba create -c conda-forge -c bioconda -n snakemake snakemake
