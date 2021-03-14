@@ -107,3 +107,7 @@ let g:syntastic_check_on_wq = 0
 " https://stackoverflow.com/questions/22980938/how-do-i-keep-syntax-highlighting-for-a-buffer-for-the-duration-of-a-vim-session
 " so the syntax higlighting does not get lost
 set hidden
+
+" Run black on save from
+" https://github.com/psf/black/blob/master/docs/editor_integration.md
+autocmd BufWritePre *.py execute ':Black'
