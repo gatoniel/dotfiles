@@ -19,6 +19,10 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'cespare/vim-toml'
+" important for black from
+" https://github.com/psf/black/blob/master/docs/editor_integration.md
+" run 'git checkout origin/stable -b stable' in ~/.vim/bundle/black
+Plugin 'psf/black'
 "
 " " add all your plugins here (note older versions of Vundle
 " " used Bundle instead of Plugin)
