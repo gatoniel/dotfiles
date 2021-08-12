@@ -51,11 +51,6 @@ unset __conda_setup
 # Poetry Python Package Management
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# pyenv from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Go Path
 export PATH="$PATH:/usr/local/go/bin"
 
