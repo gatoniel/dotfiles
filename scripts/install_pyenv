@@ -1,0 +1,10 @@
+# from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#installation
+# system requirements
+sudo apt update
+sudo apt install -y build-essential curl git libbz2-dev \
+  libffi-dev liblzma-dev libncurses5-dev libncursesw5-dev \
+  libreadline-dev libsqlite3-dev libssl-dev llvm make \
+  python-openssl tk-dev wget xz-utils zlib1g-dev
+
+# getting pyenv python
+curl https://pyenv.run | bash
