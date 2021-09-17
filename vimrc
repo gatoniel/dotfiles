@@ -111,4 +111,4 @@ set hidden
 " Run black on save from
 " https://github.com/psf/black/blob/master/docs/editor_integration.md
 autocmd BufWritePre *.py execute ':Black'
-let g:black_linelength=79
+"let g:black_linelength=79
