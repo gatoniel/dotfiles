@@ -1,0 +1,19 @@
+# from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
+
+# install python versions
+pyenv install 3.6.12
+pyenv install 3.7.9
+pyenv install 3.8.6
+pyenv install 3.9.0
+
+pyenv local 3.9.0 3.8.6 3.7.9 3.6.12
+
+# install pipx from here https://pypa.github.io/pipx/installation/
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+
+# install standalone software
+pipx install cookiecutter
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+pipx install nox
+pipx inject nox nox-poetry
