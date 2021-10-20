@@ -62,7 +62,7 @@ au BufNewFile, BufRead *.py
     \ set tabstop=4
     \ set softtabstop=4
     \ set shiftwidth=4
-    \ set textwidth=79
+    \ set textwidth=88
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
@@ -111,4 +111,6 @@ set hidden
 " Run black on save from
 " https://github.com/psf/black/blob/master/docs/editor_integration.md
 autocmd BufWritePre *.py execute ':Black'
-let g:black_linelength=79
+"let g:black_linelength=79
+
+autocmd FileType python set textwidth=88

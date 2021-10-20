@@ -10,9 +10,9 @@ fi
 
 conda update -y conda
 conda install -c conda-forge mamba
-
-# in base install cookiecutter
-pip install cookiecutter
+# deactivate conda on startup
+# https://stackoverflow.com/a/58045984
+conda config --set auto_activate_base false
 
 # SETUP standard conda envs
 mamba create -c conda-forge -c bioconda -n snakemake snakemake
