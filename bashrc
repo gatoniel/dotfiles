@@ -67,3 +67,11 @@ do
         echo "loaded $file_to_load"
     fi
 done
+
+# https://github.com/pyenv/pyenv#basic-github-checkout
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# pyenv from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
