@@ -1,6 +1,7 @@
 [user]
 	name = Niklas Netter
 	email = niknett@gmail.com
+	signingkey = FA8EF918AC4BA7B0
 [commit]
 	gpgsign = true
 [include]
