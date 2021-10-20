@@ -21,7 +21,7 @@ fi;
 # fi
 # export GPG_TTY=$(tty)
 # gpg-connect-agent updatestartuptty /bye >/dev/null
-# We will use the standard ssh-agent on sciCORE as the newest version of gpg is not available
+# We will use the standard ssh-agent on sciCORE as the newest version of gpg is not available.
 eval `ssh-agent`
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
