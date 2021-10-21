@@ -5,6 +5,13 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# https://unix.stackexchange.com/a/154431
+# test if the prompt var is not set
+if [ -z "$PS1" ]; then
+    # prompt var is not set, so this is *not* an interactive shell
+    return
+fi
+
 # User specific environment
 PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH
