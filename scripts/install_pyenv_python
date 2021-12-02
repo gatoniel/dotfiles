@@ -1,13 +1,14 @@
 # from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
 
 # install python versions
+pyenv update
 pyenv install 3.6.12
 pyenv install 3.7.9
 pyenv install 3.8.6
 pyenv install 3.9.0
-pyenv install 3.10.0rc1
+pyenv install 3.10.0
 
-pyenv local 3.10.0rc1 3.9.0 3.8.6 3.7.9 3.6.12
+pyenv local 3.10.0 3.9.0 3.8.6 3.7.9 3.6.12
 
 # install pipx from here https://pypa.github.io/pipx/installation/
 python3 -m pip install --user pipx
