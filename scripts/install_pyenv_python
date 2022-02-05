@@ -16,6 +16,8 @@ python3 -m pipx ensurepath
 
 # install standalone software
 pipx install cookiecutter
-curl -sSL https://install.python-poetry.org | python3 -
+# I will install poetry with python3.9 as otherwise it is installed with python3.10
+# python3.10 and numpy have currently compatability problems
+curl -sSL https://install.python-poetry.org | python3.9 -
 pipx install nox
 pipx inject nox nox-poetry
