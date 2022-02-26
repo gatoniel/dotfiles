@@ -15,4 +15,5 @@ conda install -c conda-forge mamba
 conda config --set auto_activate_base false
 
 # SETUP standard conda envs
-mamba create -c conda-forge -c bioconda -n snakemake snakemake
+# done via pipx in install_pyenv_python
+# mamba create -c conda-forge -c bioconda -n snakemake snakemake
