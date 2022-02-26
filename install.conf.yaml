@@ -20,6 +20,7 @@
     ~/bin/install_conda: scripts/install_conda
     ~/bin/install_pyenv: scripts/install_pyenv
     ~/bin/install_pyenv_python: scripts/install_pyenv_python
+    ~/bin/install_mono: scripts/install_mono
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
