@@ -1,6 +1,3 @@
-[user]
-	name = Niklas Netter
-	email = niknett@gmail.com
 [commit]
 	gpgsign = true
 [include]
