@@ -65,3 +65,4 @@ do
         echo "loaded $file_to_load"
     fi
 done
+. "$HOME/.cargo/env"
