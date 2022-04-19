@@ -1,0 +1,4 @@
+source $(conda info --base)/etc/profile.d/conda.sh
+cd ~/drescherlab
+conda activate vis
+jupyter notebook
