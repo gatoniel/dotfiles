@@ -18,6 +18,8 @@
     ~/.vim/syntax/snakemake.vim: vim/syntax/snakemake.vim
     ~/.vimrc:
     ~/bin/start_notebook: scripts/start_notebook
+    ~/bin/push_logseq: scripts/push_logseq
+    ~/bin/pull_logseq: scripts/pull_logseq
     ~/bin/install_conda: scripts/install_conda
     ~/bin/install_pyenv: scripts/install_pyenv
     ~/bin/install_pyenv_python: scripts/install_pyenv_python
