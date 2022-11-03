@@ -1,2 +1,4 @@
 # dont add public or private keys
 *rsa*
+# swp files from vim
+*.swp
