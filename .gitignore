@@ -2,3 +2,5 @@
 *rsa*
 # swp files from vim
 *.swp
+# python - version files from pyenv
+.python-version
