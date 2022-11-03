@@ -2,3 +2,6 @@
 	gpgsign = true
 [include]
         path = ~/.gitconfig_local
+[gcrypt]
+	gpg-args = --use-agent
+	publish-participants = false
