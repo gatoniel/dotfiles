@@ -4,7 +4,7 @@ sudo apt update
 sudo apt install -y build-essential curl git libbz2-dev \
   libffi-dev liblzma-dev libncurses5-dev libncursesw5-dev \
   libreadline-dev libsqlite3-dev libssl-dev llvm make \
-  python-openssl tk-dev wget xz-utils zlib1g-dev
+  python3-openssl tk-dev wget xz-utils zlib1g-dev
 
 # getting pyenv python
 curl https://pyenv.run | bash
