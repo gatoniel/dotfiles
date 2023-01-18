@@ -25,3 +25,4 @@ curl -sSL https://install.python-poetry.org | python3.9 -
 pipx install nox
 pipx inject nox nox-poetry
 pipx install snakemake
+pipx install pre-commit

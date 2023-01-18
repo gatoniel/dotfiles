@@ -13,8 +13,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'python-mode/python-mode'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
+" deprecated and replaced by ALE
+" Plugin 'vim-syntastic/syntastic'
+" replaces vim-syntastic/syntastic
+" Plugin 'dense-analysis/ale'
+" Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -92,16 +95,21 @@ call togglebg#map("<F5>")
 " set file numbering
 set nu
 
-" syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" syntastic config (old, deprecated)
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 "let g:syntastic_python_checkers = ['pylint']
+
+" dense-analysis/ale
+"let g:ale_keep_list_window_open = 1
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 0
 
 " from here
 " https://stackoverflow.com/questions/22980938/how-do-i-keep-syntax-highlighting-for-a-buffer-for-the-duration-of-a-vim-session
