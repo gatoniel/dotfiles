@@ -5,3 +5,5 @@
 [gcrypt]
 	gpg-args = --use-agent
 	publish-participants = false
+[init]
+	defaultBranch = main
