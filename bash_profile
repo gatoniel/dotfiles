@@ -14,7 +14,4 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# pyenv from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
 . "$HOME/.cargo/env"

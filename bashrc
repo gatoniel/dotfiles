@@ -66,3 +66,8 @@ do
     fi
 done
 . "$HOME/.cargo/env"
+
+# pyenv from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
+# from https://stackoverflow.com/a/45578839/10106730
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
