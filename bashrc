@@ -66,3 +66,9 @@ do
     fi
 done
 . "$HOME/.cargo/env"
+
+# Install Ruby Gems to ~/gems
+#export GEM_HOME="$HOME/gems"
+#export PATH="$HOME/gems/bin:$PATH"
+# ruby-install ruby-3.2.2
+export PATH="$HOME/.rubies/ruby-3.2.2/bin:$PATH"
