@@ -73,3 +73,6 @@ eval "$(pyenv init --path)"
 # from https://github.com/pyenv/pyenv-virtualenv/issues/387
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# ruby-install ruby-3.2.2
+export PATH="$HOME/.rubies/ruby-3.2.2/bin:$PATH"
