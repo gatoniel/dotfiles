@@ -20,6 +20,7 @@ Plugin 'ycm-core/YouCompleteMe'
 " Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
+" Seems to be outdated.
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'cespare/vim-toml'
 " important for black from
@@ -119,6 +120,10 @@ set hidden
 " Run black on save from
 " https://github.com/psf/black/blob/master/docs/editor_integration.md
 autocmd BufWritePre *.py execute ':Black'
-"let g:black_linelength=79
+let g:black_linelength=80
+let g:pymode_options_max_line_length=80
 
 autocmd FileType python set textwidth=88
+
+" https://vi.stackexchange.com/a/2163
+set backspace=indent,eol,start
