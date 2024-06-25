@@ -1,0 +1,22 @@
+declare -a arr=("spatial-biofilm-sorting" 
+                "spatial-biofilm-sorting-package"
+                "spatial-biofilm-killing-curves"
+                "dl-image-analysis-pipeline"
+                "vibrios-chitin"
+                "rna-seq-viewer"
+                )
+
+mkdir ~/tmp_gitlab_mirroring
+
+
+for repo in "${arr[@]}"
+do
+    cd ~/tmp_gitlab_mirroring
+    git clone --mirror git@github.com:gatoniel/"$repo".git
+    cd "$repo".git
+    
+    git remote set-url --push origin ssh://git@git.scicore.unibas.ch:2222/drescher-group/nn_github_mirrors/"$repo".git
+    git push --mirror
+done
+
+rm -rf ~/tmp_gitlab_mirroring
