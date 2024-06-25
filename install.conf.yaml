@@ -18,12 +18,14 @@
     ~/.vim/syntax/snakemake.vim: vim/syntax/snakemake.vim
     ~/.vimrc:
     ~/bin/start_notebook: scripts/start_notebook
+    ~/bin/activate_cuda-11.2: scripts/activate_cuda-11.2
     ~/bin/push_logseq: scripts/push_logseq
     ~/bin/pull_logseq: scripts/pull_logseq
     ~/bin/install_conda: scripts/install_conda
     ~/bin/install_pyenv: scripts/install_pyenv
     ~/bin/install_pyenv_python: scripts/install_pyenv_python
     ~/bin/install_mono: scripts/install_mono
+    ~/bin/mirror_to_gitlab: scripts/mirror_to_gitlab
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

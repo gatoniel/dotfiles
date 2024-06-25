@@ -4,6 +4,7 @@ declare -a arr=("spatial-biofilm-sorting"
                 "dl-image-analysis-pipeline"
                 "vibrios-chitin"
                 "rna-seq-viewer"
+                "napari-nd2-folder-viewer"
                 )
 
 mkdir ~/tmp_gitlab_mirroring
