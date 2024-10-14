@@ -70,7 +70,7 @@ do
 done
 
 # load new git version
-module load git/2.23.0-GCCcore-8.3.0-nodocs
+module load git/2.42.0-GCCcore-13.2.0
 
 # set PYTHONUNBUFFERED in cluster environment
 export PYTHONUNBUFFERED=1
