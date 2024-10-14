@@ -17,9 +17,9 @@ PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH
 
 # https://serverfault.com/a/311405
-if [[ -n "$PS1" ]]; then
-    cat /etc/motd
-fi;
+# if [[ -n "$PS1" ]]; then
+#     cat /etc/motd
+# fi;
 
 # https://wiki.archlinux.org/index.php/GnuPG#gpg-agent
 # unset SSH_AGENT_PID
