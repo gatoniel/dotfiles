@@ -1,5 +1,5 @@
 if [ ! -d "$HOME/miniconda3" ]; then
-    curl -o $HOME/conda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    curl -L -o $HOME/conda.sh https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
     mkdir $HOME/tmpconda
     TMPDIR=$HOME/tmpconda bash conda.sh -b -p $HOME/miniconda3
     source ~/.bashrc
@@ -9,10 +9,8 @@ if [ ! -d "$HOME/miniconda3" ]; then
 fi
 
 conda update -y conda
-conda install -c conda-forge mamba
 # deactivate conda on startup
 # https://stackoverflow.com/a/58045984
 conda config --set auto_activate_base false
 
-# SETUP standard conda envs
-mamba create -c conda-forge -c bioconda -n snakemake snakemake
+mamba create -y -n snakemake snakemake
