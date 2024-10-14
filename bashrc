@@ -57,12 +57,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Poetry Python Package Management
-export PATH="$HOME/.poetry/bin:$PATH"
-
-# Go Path
-export PATH="$PATH:/usr/local/go/bin"
-
 files=(proxies)
 path="$HOME/dotfiles_local/bash/"
 for file in ${files[@]}
@@ -75,15 +69,8 @@ do
     fi
 done
 
-# https://github.com/pyenv/pyenv#basic-github-checkout
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 # load new git version
 module load git/2.23.0-GCCcore-8.3.0-nodocs
-# pyenv from https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/guide.html#getting-python
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
 
 # set PYTHONUNBUFFERED in cluster environment
 export PYTHONUNBUFFERED=1
