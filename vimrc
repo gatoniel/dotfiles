@@ -127,3 +127,5 @@ autocmd FileType python set textwidth=88
 
 " https://vi.stackexchange.com/a/2163
 set backspace=indent,eol,start
+
+let @n = 'A  # noqa: E0602'
