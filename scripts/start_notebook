@@ -2,4 +2,4 @@ source $(conda info --base)/etc/profile.d/conda.sh
 source activate_cuda-11.2
 cd ~/drescherlab
 conda activate vis
-jupyter notebook --port 8888
+jupyter notebook --port 8888 --no-browser
