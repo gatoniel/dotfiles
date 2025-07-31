@@ -115,6 +115,7 @@ set nu
 set hidden
 
 autocmd FileType python set textwidth=88
+let g:pymode_options_max_line_length = 88
 
 " https://vi.stackexchange.com/a/2163
 set backspace=indent,eol,start
