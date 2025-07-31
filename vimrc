@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'python-mode/python-mode'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'prabirshrestha/vim-lsp'
 " deprecated and replaced by ALE
 " Plugin 'vim-syntastic/syntastic'
 " replaces vim-syntastic/syntastic
@@ -23,10 +24,6 @@ Plugin 'altercation/vim-colors-solarized'
 " Seems to be outdated.
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'cespare/vim-toml'
-" important for black from
-" https://github.com/psf/black/blob/master/docs/editor_integration.md
-" run 'git checkout origin/stable -b stable' in ~/.vim/bundle/black
-Plugin 'psf/black'
 "
 " " add all your plugins here (note older versions of Vundle
 " " used Bundle instead of Plugin)
@@ -117,15 +114,31 @@ set nu
 " so the syntax higlighting does not get lost
 set hidden
 
-" Run black on save from
-" https://github.com/psf/black/blob/master/docs/editor_integration.md
-autocmd BufWritePre *.py execute ':Black'
-let g:black_linelength=80
-let g:pymode_options_max_line_length=80
-
 autocmd FileType python set textwidth=88
 
 " https://vi.stackexchange.com/a/2163
 set backspace=indent,eol,start
 
 let @n = 'A  # noqa: E0602'
+
+" Ruff
+if executable('ruff')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'ruff',
+        \ 'cmd': {server_info->['ruff', 'server']},
+        \ 'allowlist': ['python'],
+        \ 'workspace_config': {},
+        \ })
+endif
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+
+    autocmd! BufWritePre *.py call execute('LspDocumentFormatSync')
+endfunction
+
+augroup lsp_install
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+let g:lsp_auto_enable = 1
